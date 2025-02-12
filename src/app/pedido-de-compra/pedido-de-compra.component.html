@@ -1,0 +1,23 @@
+<po-page-default p-title="Pedidos de Compra">
+    <po-search></po-search>
+    <po-button class="po-pt-3" p-label="Incluir" p-kind="primary" (p-click)="modal.open()"></po-button>
+    
+    <po-table [p-columns]="columns" [p-items]="pedidos" [p-sort]="true">
+    </po-table>
+
+    <po-modal #modal p-title="Incluir compra"> 
+        <div class="po-row">
+            <po-input class="po-md-4" p-clean p-icon="an an-truck" p-label=" Placa do Veículo"></po-input>
+            <po-datepicker class="po-md-5" p-clean p-icon="an an-data" p-label="Data Abastecimento"></po-datepicker>
+        </div>
+        <div class="po-row">
+            <po-input class="po-md-7" p-clean p-icon="an an-building" p-label="Nome Fantasia"></po-input>
+            <po-input class="po-md-5" p-clean p-icon="an an-identification-card" p-label="CPF/CNPJ"></po-input>
+        </div>
+        <div class="po-row">
+            <po-input class="po-md-4" p-clean p-icon="an an-chart-line" p-label="Média Valor"></po-input>
+            <po-input class="po-md-4" p-clean p-icon="an an-gas-pump" p-label="Quantidade"></po-input>
+            <po-input class="po-md-4" p-clean p-icon="an an-currency-circle-dollar" p-label="Valor Total"></po-input>
+        </div>
+    </po-modal>
+</po-page-default>

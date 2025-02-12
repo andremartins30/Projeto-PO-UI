@@ -1,0 +1,5 @@
+.dashboard-container {
+    height: 100vh; /* Ocupa a altura total da viewport */
+    overflow-y: auto; /* Permite a rolagem vertical */
+    padding: 0 15px; /* Adicione um pouco de padding para evitar que o conteúdo encoste nas bordas */
+}

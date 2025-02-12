@@ -1,0 +1,38 @@
+<po-page-dynamic-search
+    p-title="Integração x7"
+    [p-filters]="filters"
+    [p-quick-search-width]="quickSearchWidth"
+    [p-hide-remove-all-disclaimer]="hideRemoveAllDisclaimer"
+    [p-hide-close-disclaimers]="hideCloseDisclaimers"
+    (p-quick-search)="onSearch($event)"
+    (p-advanced-search)="onAdvancedSearch($event)"
+    (p-cancel-advanced-search)="limparFiltros()"
+    p-sticky-header="true">
+    
+    <po-table
+        [p-columns]="columns"
+        [p-items]="filteredAbastecimentos"
+        [p-hide-columns-manager]="true"
+        [p-selectable]="false"
+        [p-single-select]="true"
+        [p-sort]="true"
+        p-sticky-header="true"
+        (p-row-click)="onRowClick($event)">
+    </po-table>
+</po-page-dynamic-search>
+
+<po-modal 
+    *ngIf="showModal"
+    p-title="Detalhes"
+    p-width="500"
+    (p-close)="closeModal()">
+    <ng-template p-modal-content>
+        <div>
+        <p><strong>Filial:</strong> {{ selectedItem.filial }}</p>
+        <p><strong>Fornecedor:</strong> {{ selectedItem.fornecedor }}</p>
+        <p><strong>Data Inicial:</strong> {{ selectedItem.dateini}}</p>
+        <p><strong>Data Final:</strong> {{ selectedItem.datefin}}</p>
+        <p><strong>Status:</strong> {{ selectedItem.status }}</p>
+        </div>
+    </ng-template>
+</po-modal>

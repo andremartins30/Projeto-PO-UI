@@ -1,0 +1,29 @@
+.container-full {
+    margin: -16px;  /* Remove as margens padrão */
+}
+
+::ng-deep .po-page-dynamic-search-container {
+    height: 100%;
+    width: 100%;
+}
+
+::ng-deep .po-page-dynamic-search {
+    height: 100%;
+    padding: 0;
+}
+
+::ng-deep .po-table-wrapper {
+    margin-top: 16px;
+}
+
+.integracao-x7-container {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+  .integracao-x7-container h1 {
+    margin-bottom: 16px;
+  }
